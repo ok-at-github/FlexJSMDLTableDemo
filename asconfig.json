@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "targets": [
+      "JSFlex"
+    ]
+  },
+  "additionalOptions": "-html-template=src/resources/mdl-js-index-template.html -compiler.exclude-defaults-css-files=HTML.swc:defaults.css", 
+  "files": [
+    "src/FlexJSMDLTableDemo.mxml"
+  ]
+}
