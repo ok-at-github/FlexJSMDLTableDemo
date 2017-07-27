@@ -20,17 +20,18 @@
         ]]>
     </fx:Script>
 
-	<mdl:beads>
-       	<js:ContainerDataBinding/>
-    </mdl:beads>
-
-	<mdl:Table id="tblUsers" shadow="2" selectable="true" className="TableRowItemRenderer">
-		<mdl:columns>
-			<mdl:TableColumn headerText="Username" />
-			<mdl:TableColumn headerText="First Name"/>
-			<mdl:TableColumn headerText="Last Name"/>
-			<mdl:TableColumn headerText="Email"/>
-		</mdl:columns>
-	</mdl:Table>
+	<mdl:GridCell column="1">
+		<mdl:beads>
+       		<js:ContainerDataBinding/>
+    	</mdl:beads>
+		<mdl:Table id="tblUsers" shadow="2" selectable="true" className="TableRowItemRenderer">
+			<mdl:columns>
+				<mdl:TableColumn headerText="Username" />
+				<mdl:TableColumn headerText="First Name"/>
+				<mdl:TableColumn headerText="Last Name"/>
+				<mdl:TableColumn headerText="Email"/>
+			</mdl:columns>
+		</mdl:Table>
+	<mdl:GridCell>
 
 </mdl:Grid>
