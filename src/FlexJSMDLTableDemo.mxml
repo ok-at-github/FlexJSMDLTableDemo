@@ -4,6 +4,8 @@
                  xmlns:mdl="library://ns.apache.org/flexjs/mdl"
 				 xmlns:local="org.*">
 
+    <fx:Style source="resources/mdl-styles.css"/>
+
     <js:valuesImpl>
         <js:SimpleCSSValuesImpl /> 
     </js:valuesImpl>

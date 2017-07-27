@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+  <output>
+    <movie input=""/>
+    <movie background="#FFFFFF"/>
+    <movie fps="32"/>
+    <movie width="800"/>
+    <movie height="600"/>
+    <movie version="23"/>
+    <movie disabled="False"/>
+    <movie path="bin-debug/FlexJSMDLTableDemo.swf"/>
+  </output>
+  &lt;!-- Other classes to be compiled into your SWF --&gt;
+  <classpaths>
+    <class path="D:\Daten\demo_projects\FlexJSMDLTableDemo\src"/>
+  </classpaths>
+  <moonshineResourcePaths></moonshineResourcePaths>
+  <build>
+    <option antBuildPath="build/build.xml"/>
+    <option strict="True"/>
+    <option accessible="False"/>
+    <option useNetwork="True"/>
+    <option showUnusedTypeSelectorWarnings="True"/>
+    <option useResourceBundleMetadata="True"/>
+    <option benchmark="False"/>
+    <option warnings="True"/>
+    <option customSDK="C:\Daten\flex_sdks\flexjs_0_8_0"/>
+    <option es="False"/>
+    <option verboseStackTraces="False"/>
+    <option allowSourcePathOverlap="False"/>
+    <option loadConfig=""/>
+    <option linkReport=""/>
+    <option optimize="False"/>
+    <option showActionScriptWarnings="True"/>
+    <option locale=""/>
+    <option showBindingWarnings="True"/>
+    <option additional=" +configname=air"/>
+    <option showDeprecationWarnings="True"/>
+    <option compilerConstants=""/>
+    <option staticLinkRSL="False"/>
+  </build>
+  <includeLibraries></includeLibraries>
+  <libraryPaths></libraryPaths>
+  <externalLibraryPaths></externalLibraryPaths>
+  <rslPaths></rslPaths>
+  <intrinsics></intrinsics>
+  <library>
+    
+    
+  </library>
+  <compileTargets>
+    <compile path="D:\Daten\demo_projects\FlexJSMDLTableDemo\src\FlexJSMDLTableDemo.mxml"/>
+  </compileTargets>
+  <hiddenPaths></hiddenPaths>
+  <preBuildCommand>null</preBuildCommand>
+  <postBuildCommand alwaysRun="False">null</postBuildCommand>
+  <options>
+    <option defaultBuildTargets=""/>
+    <option testMovieCommand=""/>
+    <option testMovie="AIR"/>
+    <option showHiddenPaths="False"/>
+  </options>
+</project>
