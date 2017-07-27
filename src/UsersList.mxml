@@ -21,7 +21,11 @@
     </fx:Script>
 
 
-	<mdl:Table id="tblUsers" shadow="2" selectable="true">
+	<mdl:beads>
+       	<js:ContainerDataBinding/>
+    </mdl:beads>
+
+	<mdl:Table id="tblUsers" shadow="2" selectable="true" className="TableRowItemRenderer">
 		<mdl:columns>
 			<mdl:TableColumn headerText="Username" />
 			<mdl:TableColumn headerText="First Name"/>
