@@ -1,4 +1,4 @@
-package
+package org
 {
     [Bindable]
 	public class UserVO

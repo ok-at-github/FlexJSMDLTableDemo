@@ -23,7 +23,7 @@
 @namespace js "library://ns.apache.org/flexjs/basic";
 @namespace mdl "library://ns.apache.org/flexjs/mdl";
 
-.flexjs *, . flexjs *:before, . flexjs *:after {
+.flexjs *, .flexjs *:before, .flexjs *:after {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -35,8 +35,14 @@
 	margin: 10px;
 }
 
+.tableRowItemRenderer
+{
+    IItemRenderer: ClassReference("org.TableRowItemRenderer");
+}
 
+/*
 Table
 {
     IDataProviderItemRendererMapper: ClassReference("org.apache.flex.html.beads.DataItemRendererFactoryForArrayList");
 }
+*/

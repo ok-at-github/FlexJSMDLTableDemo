@@ -24,7 +24,7 @@ limitations under the License.
 
     <fx:Script>
 		<![CDATA[
-			import org.puremvc.as3.demos.flex.employeeadmin.model.vo.UserVO;
+			import org.UserVO;
             
             [Bindable("dataChange")]
             public function get userVO():UserVO

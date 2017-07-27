@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<js:Group xmlns:fx="http://ns.adobe.com/mxml/2009"
+         xmlns:js="library://ns.apache.org/flexjs/basic"
+        xmlns:mdl="library://ns.apache.org/flexjs/mdl"
+		initComplete="onInitComplete()">
+
+
+    <fx:Script>
+        <![CDATA[
+			import org.UserVO;
+			
+			[Bindable] public var users:Array;
+			
+			private function onInitComplete():void {
+				users = new Array();
+				users.push( new UserVO("lstooge","Larry", "Stooge", "larry@stooges.com" ) );
+				users.push( new UserVO("lstooge","Larry", "Stooge", "larry@stooges.com" ) );
+				//tblUsers.dataProvider = users;
+			}
+        ]]>
+    </fx:Script>
+
+	<!--
+	<mdl:beads>
+		<js:ContainerDataBinding/>
+	</mdl:beads>
+	-->
+	
+	<!--
+	<mdl:Table id="tblUsers" shadow="2" selectable="true" className="tableRowItemRenderer" > 
+		<mdl:columns>
+			<mdl:TableColumn headerText="Username" />
+			<mdl:TableColumn headerText="First Name"/>
+			<mdl:TableColumn headerText="Last Name"/>
+			<mdl:TableColumn headerText="Email"/>
+		</mdl:columns>
+	</mdl:Table>
+	-->
+	<js:Label text="test" />
+
+</js:Group>
