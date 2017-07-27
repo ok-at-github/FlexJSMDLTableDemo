@@ -26,7 +26,6 @@
 	</mdl:beads>
 	-->
 	
-	<!--
 	<mdl:Table id="tblUsers" shadow="2" selectable="true" className="tableRowItemRenderer" > 
 		<mdl:columns>
 			<mdl:TableColumn headerText="Username" />
@@ -35,7 +34,6 @@
 			<mdl:TableColumn headerText="Email"/>
 		</mdl:columns>
 	</mdl:Table>
-	-->
-	<js:Label text="test" />
+
 
 </js:Group>

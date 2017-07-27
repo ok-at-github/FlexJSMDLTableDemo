@@ -4,9 +4,13 @@
                  xmlns:mdl="library://ns.apache.org/flexjs/mdl"
 				 xmlns:local="org.*">
 
+    <js:valuesImpl>
+        <js:SimpleCSSValuesImpl /> 
+    </js:valuesImpl>
+
 	<js:initialView>
 		<js:View>
 			<local:UsersList />
-		</js:View>
+		</js:View> 
     </js:initialView>
 </js:Application>
