@@ -35,14 +35,7 @@
 	margin: 10px;
 }
 
-.tableRowItemRenderer
+.customTableRowItemRenderer
 {
-    IItemRenderer: ClassReference("org.TableRowItemRenderer");
+    IItemRenderer: ClassReference("itemRenderers.CustomTableRowItemRenderer");
 }
-
-/*
-Table
-{
-    IDataProviderItemRendererMapper: ClassReference("org.apache.flex.html.beads.DataItemRendererFactoryForArrayList");
-}
-*/

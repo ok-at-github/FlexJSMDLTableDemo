@@ -24,9 +24,9 @@ limitations under the License.
 
     <fx:Script>
 		<![CDATA[
-			import org.UserVO;
-            
-            [Bindable("dataChange")]
+        import vo.UserVO;
+
+        [Bindable("dataChange")]
             public function get userVO():UserVO
             {
                 return data as UserVO;
@@ -38,7 +38,7 @@ limitations under the License.
         <js:ItemRendererDataBinding />
     </mdl:beads>
     
-    <mdl:TableCell text="{userVO.username}" nonNumeric="true"/>
+    <mdl:TableCell text="{userVO.username}"/>
     <mdl:TableCell text="{userVO.firstname}"/>
     <mdl:TableCell text="{userVO.lastname}"/>
     <mdl:TableCell text="{userVO.email}"/>
