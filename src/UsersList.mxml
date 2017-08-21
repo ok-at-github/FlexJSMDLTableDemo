@@ -34,6 +34,7 @@ limitations under the License.
 				_users.addItem( new UserVO("lstooge","Larry", "Stooge", "larry@stooges.com" ) );
 				_users.addItem( new UserVO("cstooge","Curly", "Stooge", "curly@stooges.com" ) );
 				_users.addItem( new UserVO("mstooge","Moe", "Stooge", "moe@stooges.com" ) );
+				tblUsers.dataProvider = _users;
 			}
         ]]>
     </fx:Script>
@@ -51,7 +52,9 @@ limitations under the License.
 				<mdl:TableColumn headerText="Last Name"/>
 				<mdl:TableColumn headerText="Email"/>
 			</mdl:columns>
-
+			<mdl:beads>
+				<js:DataItemRendererFactoryForArrayList />
+			</mdl:beads>
 		</mdl:Table>
 	</mdl:GridCell>
 </mdl:Grid>
