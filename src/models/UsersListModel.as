@@ -1,4 +1,3 @@
-/*
 ////////////////////////////////////////////////////////////////////////////////
 //
 //  Licensed to the Apache Software Foundation (ASF) under one or more
@@ -17,26 +16,22 @@
 //  limitations under the License.
 //
 ////////////////////////////////////////////////////////////////////////////////
-*/
-
-@namespace "http://www.w3.org/1999/xhtml";
-@namespace js "library://ns.apache.org/flexjs/basic";
-@namespace mdl "library://ns.apache.org/flexjs/mdl";
-
-.flexjs *, .flexjs *:before, .flexjs *:after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-.page-content
+package models
 {
-	padding: 10px;
-	margin: 10px;
-}
+    import org.apache.flex.collections.ArrayList;
+    import vo.UserVO;
 
-.customTable
-{
-    IDataProviderItemRendererMapper: ClassReference("org.apache.flex.html.beads.DynamicItemsRendererFactoryForArrayListData");
-    IItemRenderer: ClassReference("itemRenderers.CustomTableRowItemRenderer");
+    [Bindable]
+    public class UsersListModel
+    {
+        private var _users:ArrayList = new ArrayList([
+            new UserVO("lstooge","Larry", "Stooge", "larry@stooges.com" ),
+            new UserVO("cstooge","Curly", "Stooge", "curly@stooges.com" )
+        ]);
+
+        public function get users():ArrayList
+        {
+            return _users;
+        }
+    }
 }

@@ -18,24 +18,16 @@ limitations under the License.
 
 -->
 <mdl:Grid xmlns:fx="http://ns.adobe.com/mxml/2009"
-          xmlns:js="library://ns.apache.org/flexjs/basic"
-          xmlns:mdl="library://ns.apache.org/flexjs/mdl">
+		  xmlns:js="library://ns.apache.org/flexjs/basic"
+		  xmlns:mdl="library://ns.apache.org/flexjs/mdl" xmlns:models="models.*">
     <fx:Script>
         <![CDATA[
-		import org.apache.flex.collections.ArrayList;
 		import vo.UserVO;
 
-		[Bindable]
-			public var _users:ArrayList;
-
-			private function onInitComplete():void {
-
-				_users = new ArrayList();
-				_users.addItem( new UserVO("lstooge","Larry", "Stooge", "larry@stooges.com" ) );
-				_users.addItem( new UserVO("cstooge","Curly", "Stooge", "curly@stooges.com" ) );
-				_users.addItem( new UserVO("mstooge","Moe", "Stooge", "moe@stooges.com" ) );
-				tblUsers.dataProvider = _users;
-			}
+		private function onAddEmployeeClick(event:Event):void
+		{
+			usersListModel.users.addItem(new UserVO("Ok", "Olaf", "Kruger", "olaf@olaf.eu"));
+		}
         ]]>
     </fx:Script>
 
@@ -43,9 +35,13 @@ limitations under the License.
 		<js:ContainerDataBinding/>
 	</mdl:beads>
 
+	<mdl:model>
+		<models:UsersListModel id="usersListModel"/>
+	</mdl:model>
+
 	<mdl:GridCell column="12">
-		<mdl:Table id="tblUsers" shadow="2" selectable="true"
-				   dataProvider="{_users}">
+		<mdl:Table id="tblUsers" shadow="2"
+				   dataProvider="{usersListModel.users}" className="customTable">
 			<mdl:columns>
 				<mdl:TableColumn headerText="Username" />
 				<mdl:TableColumn headerText="First Name"/>
@@ -53,8 +49,16 @@ limitations under the License.
 				<mdl:TableColumn headerText="Email"/>
 			</mdl:columns>
 			<mdl:beads>
-				<js:DataItemRendererFactoryForArrayList />
+				<!--Bead for listening changes of collection source-->
+				<js:DataProviderCollectionChangeNotifier sourceID="usersListModel" propertyName="users"
+														 destinationPropertyName="dataProvider" changeEventName="dataProviderChanged"  />
+				<!--Bead for listening items events changes-->
+				<js:DataProviderItemsChangeNotifier sourceID="usersListModel" propertyName="users"
+													destinationPropertyName="dataProvider" changeEventName="dataProviderChanged"  />
 			</mdl:beads>
 		</mdl:Table>
+	</mdl:GridCell>
+	<mdl:GridCell>
+		<mdl:Button text="Add Employee" width="100" click="onAddEmployeeClick(event)"/>
 	</mdl:GridCell>
 </mdl:Grid>
